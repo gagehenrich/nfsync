@@ -1,8 +1,21 @@
 # nfsync
+Whether migrating vast datasets or keeping distributed storage in sync, nfsync delivers reliability, speed, and transparency
+ 
+## Pre-requisites
+go 1.20+ installed
+
+### Clone this repo
+`git clone https://github.com/gagehenrich/nfsync.git && cd nfsync`
+
+### Compile 
+`go build -o nfsync` 
+
 ### Usage
 `./nfsync [ optional: --threads <num_threads> ] <src> <dst>` 
+**NOTE:** threads should depend on your hardware. Deault threads is 64.
 
-**NOTE:** threads should depend on your CPU.  default threads is 64.
+### Logging
+nfsync provides detailed logs for every operation, enabling thorough auditing of large-scale file transfers. 
 
 ex: 
 ```sh
